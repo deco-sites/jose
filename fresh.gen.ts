@@ -9,10 +9,11 @@ import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/_middleware.ts";
 import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
-import * as $$$0 from "./sections/GetStarted.tsx";
-import * as $$$1 from "./sections/Head.tsx";
-import * as $$$2 from "./sections/Markdown.tsx";
-import * as $$$3 from "./sections/QuillText.tsx";
+import * as $$$0 from "./sections/Footer.tsx";
+import * as $$$1 from "./sections/GetStarted.tsx";
+import * as $$$2 from "./sections/Head.tsx";
+import * as $$$3 from "./sections/Markdown.tsx";
+import * as $$$4 from "./sections/QuillText.tsx";
 import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
@@ -24,13 +25,45 @@ const manifest: DecoManifest = {
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
   sections: {
-    "./sections/GetStarted.tsx": $$$0,
-    "./sections/Head.tsx": $$$1,
-    "./sections/Markdown.tsx": $$$2,
-    "./sections/QuillText.tsx": $$$3,
+    "./sections/Footer.tsx": $$$0,
+    "./sections/GetStarted.tsx": $$$1,
+    "./sections/Head.tsx": $$$2,
+    "./sections/Markdown.tsx": $$$3,
+    "./sections/QuillText.tsx": $$$4,
   },
   functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
+    "./sections/Footer.tsx": {
+      "inputSchema": {
+        "title": " Footer",
+        "type": "object",
+        "properties": {
+          "githubLink": {
+            "type": "string",
+            "title": "Github Link",
+          },
+          "linkedinLink": {
+            "type": "string",
+            "title": "Linkedin Link",
+          },
+          "email": {
+            "type": "string",
+            "title": "Email",
+          },
+          "phone": {
+            "type": "string",
+            "title": "Phone",
+          },
+        },
+        "required": [
+          "githubLink",
+          "linkedinLink",
+          "email",
+          "phone",
+        ],
+      },
+      "outputSchema": null,
+    },
     "./sections/GetStarted.tsx": {
       "inputSchema": {
         "title": " Get Started",

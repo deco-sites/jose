@@ -6,7 +6,7 @@ export interface Props {
 
 export default function GetStarted({ enableInspectVSCode }: Props) {
   return (
-    <section class="pt-20 pb-32">
+    <section class=" w-[98%] mx-auto pt-10 pb-10">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center -m-6">
           <div class="w-full md:w-1/2 p-6">
